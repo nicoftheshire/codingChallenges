@@ -20,11 +20,10 @@ def merge_sort(list):
 def merge(left_partition, right_partition):
     i = 0
     j = 0
-    left_partition = []
-    right_partition = []
     ret_list = []
+
     while i < len(left_partition) and j < len(right_partition):
-        if left_partition[i] < right_partition[j]:
+        if left_partition[i] <= right_partition[j]:
             ret_list.append(left_partition[i])
             i += 1
         else:
